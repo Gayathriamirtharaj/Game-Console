@@ -2,22 +2,27 @@ package animals;
 
 import wild.WildAnimals;
 
-public class Cat extends WildAnimals implements playable{
+public class Cat extends Animal implements playable{
     String type="pet";
     String name="";
     int no_of_legs=4;
     public Cat( String catname)
     {
-        name=catname;
+        super(catname);
     }
+    public String getName()
+    {
+        return(name);
+    }
+
     public void eat(){
         System.out.println("Am an omnivore");
     }
     public void speak(){
-        System.out.println("HI!! AM "+name +"and i have "+no_of_legs);
+        System.out.println("HI!! AM "+getName() +"and i have "+no_of_legs);
     }
-    public void type(){
-        System.out.println(type);
+    public String getType(){
+        return(type);
     }
     public void play(){
         String playing="Throw me a ball and i can fetch";

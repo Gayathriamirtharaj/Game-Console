@@ -1,4 +1,5 @@
 package wild;
+import wild.WildAnimals;
 
 public class Tiger extends WildAnimals implements wildanimal{
 
@@ -7,14 +8,21 @@ public class Tiger extends WildAnimals implements wildanimal{
     String name="";
     public Tiger(String lname)
     {
-        name=lname;
+        super(lname);
     }
+    public String getName()
+    {
+        return(name);
+    }
+    public String getType(){return type;}
+
+
     public void eat()
     {
         System.out.println("Am an carnivore");
     }
     public void speak(){
-        System.out.println("hi am "+name+" "+no_of_legs+"legged tiger");
+        System.out.println("hi am "+getName()+" "+no_of_legs+"legged tiger");
     }
     public void tame(){
         speak();
