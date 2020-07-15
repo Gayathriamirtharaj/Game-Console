@@ -15,9 +15,7 @@ public class Animal {
             System.out.println(name+" is eating ");
         }
 
-        protected void sleep(){
-            System.out.println(name+ " the " + type );
-        }
+
 
         public void speak(){
             System.out.println(name+" the "+type+" is saying i can play");
